@@ -6,13 +6,8 @@ if (!isset($cbMail)) $cbMail = "";
 if (!isset($cbText)) $cbText = "";
 if (!isset($callbackResult)) $callbackResult = "";
 
-if($code)
-$cbText = $product['name'] . ", Артикул:" . $code;
-elseif($product['name'])
-	$cbText = $product['name'];
+
 ?>
-
-
 
 <div class="bread">
 <a href="/">Главная</a> / <a href="/services/">Услуги</a> / <?=$crumbs?><!--mcatalog?target=products-->
@@ -38,18 +33,19 @@ elseif($product['name'])
         <meta itemprop="priceCurrency" content="RUB">
         </span>
         <div><?=$supply?></div><br>
+		
+		
+		<!--
         <div class="d-inline-block"><div class="pb-0 d-flex align-items-center justify-content-center counter-wrp"><button class="ProductCount" action="0" product="<?=$product['ID']?>">-</button><input class="ProductCount" type="text" value="<?=$ProductCountInCart?>" autocomplete="off" product="<?=$product['ID']?>"><button class="ProductCount" action="1" product="<?=$product['ID']?>">+</button></div></div>&nbsp;
         <button class="buy greenGradient" product="<?=$product['ID']?>" data-prdincart="<?=$prdincart?>" style="width: 130px;max-width: 130px;" onclick="window.location.reload();"><?=$buttonText;?></button>&nbsp;
         <button class="greyGradient" onclick="window.print();">Печать</button>
+		-->
+		
+		
         <form id="pvn-switch" method="post"><input type="hidden" name="action" value="pvn-switch"></form>
     </div>
 	
-	
-	
-	
-		<?php     
-	if( $buttonText=="Заказано!" ){
-?>
+
 
 	<div class="catalog w-100">
 		<div class="mcatalogBlock">
@@ -70,11 +66,7 @@ elseif($product['name'])
 	</div>
 	</div>
 	
-	<?php	
-	}          
-	?>
-	
-	
+
 	
 	
 	
