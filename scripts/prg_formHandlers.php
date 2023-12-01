@@ -192,7 +192,7 @@ if (array_key_exists('action', $_POST) AND $_POST['action']==='customorder') {
 	$article=$_POST['article'];
 	$productname=$_POST['productname'];
 	if ($article!='') $article = 'Артикул: '.$article;
-	if ($productname!='') $article = 'Название услуги: '.$productname;
+	if ($productname!='') $productname = 'Название услуги: '.$productname;
 	
 	unset($_POST);
 	$counter=0;
